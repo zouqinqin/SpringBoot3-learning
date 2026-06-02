@@ -1,0 +1,44 @@
+#system-design/
+sql/
+
+# 编译产物
+*.class
+out/
+
+# GC 日志
+*.log
+
+# 堆转储文件
+*.hprof
+*.hprof.hwcache
+NBProfiler*
+
+# IDEA 配置（保留项目结构，忽略本地配置）
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries
+.idea/shelf
+.idea/httpRequests
+.idea/dataSources/
+CopilotChat*
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Maven 编译产物
+target/
+*.jar
+*.war
+.index/
+*.index
+
+# JVM dump 文件
+*.threads
+*_Leak_Suspects.zip
+heapdump*
+
+# IDEA 本身
+*.iml
