@@ -17,4 +17,6 @@ public class RobotServiceImpl implements RobotService {
     public String getRobotMessage() {
         return "你好，"+properties.getName() +"年龄："+properties.getAge();
     }
+
+
 }
