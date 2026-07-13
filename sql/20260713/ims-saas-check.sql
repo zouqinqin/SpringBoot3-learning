@@ -34,3 +34,4 @@ create table rec_finance_approval_approver
     comment '审批人快照表';
 
 create index idx_approval on rec_finance_approval_approver (approval_id);
+
