@@ -92,7 +92,42 @@ class RobotSpringBootStarterApplicationTests {
 
         return builder.toString();
     }
+    @Test
+    void testQueue(){
+        Deque<Integer> deque = new ArrayDeque<>();
+        deque.offer(1);
+        deque.offer(2);
 
+        System.out.println(deque.peek());// 1
+
+        int size = deque.size();
+
+        for(int i = 0;i < size;i++){
+            Integer poll = deque.poll();
+
+            if(i == size -1){
+                System.out.println(poll);
+            }
+        }
+    }
+    @Test
+    void testQueue2(){
+        Map<Integer,Integer> map = new HashMap<>();
+        map.put(1,10);
+        map.put(2,20);
+        map.put(3,20);
+
+        int maxValue = Integer.MIN_VALUE;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            Integer key = entry.getKey();
+            Integer value = entry.getValue();
+            maxValue = Math.max(maxValue,value);
+        }
+        System.out.println(maxValue);
+
+
+
+    }
 
 
 
