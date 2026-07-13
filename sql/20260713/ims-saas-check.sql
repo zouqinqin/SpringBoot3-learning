@@ -45,11 +45,11 @@ create index idx_approval on rec_finance_approval_approver (approval_id);
 
 v_qinqinzou(邹勤勤) 邀请您参加腾讯会议
 会议主题：v_qinqinzou(邹勤勤)的快速会议
-会议时间：2026/07/13 14:40-15:40 (GMT+08:00) 中国标准时间 - 北京
+会议时间：2026/07/13 14:46-15:46 (GMT+08:00) 中国标准时间 - 北京
 
 点击链接直接加入会议：
-https://meeting.tencent.com/dm/9Ck9D4iW1gFu
+https://meeting.tencent.com/dm/WNqmwKqEnKvU
 
-#腾讯会议：908-115-983
+#腾讯会议：192-738-529
 
 复制该信息，打开手机腾讯会议即可参与
