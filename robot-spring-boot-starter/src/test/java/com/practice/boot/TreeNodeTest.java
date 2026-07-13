@@ -5,7 +5,8 @@ import java.util.*;
 
 public class TreeNodeTest {
 
-      public static class TreeNode { int val;
+      public static class TreeNode {
+          int val;
           TreeNode left;
          TreeNode right;
           TreeNode() {}
@@ -34,26 +35,26 @@ public class TreeNodeTest {
                         new TreeNode(11)
                 )
         );
+        /**
+         *     4
+         *   /   \
+         *  2     7
+         * / \
+         *1   3
+         *
+         **/
         TreeNode root2 = new TreeNode(4);
-        root2.left = new TreeNode(2);
-        root2.right = new TreeNode(7);
+        root2.left = new TreeNode(2);;
         root2.left.left = new TreeNode(1);
         root2.left.right = new TreeNode(3);
-
+        root2.right = new TreeNode(7);
 
          Map<Integer, List<Integer>> adjList = new HashMap<>();
         adjList.computeIfAbsent(1,k->new ArrayList<>()).add(2);
 
     }
 
-    private static void preOrder(TreeNode root){
-          if(root == null){
-              return;
-          }
-        System.out.println("preOrder"+root.val);
-        preOrder(root.left);
-        preOrder(root.right);
-    }
+
     // 二叉搜索树的查找key
     private static TreeNode inOrder(TreeNode root,int key){
         if(root == null){
@@ -63,28 +64,53 @@ public class TreeNodeTest {
             root = root.val > key ? root.left: root.right;
         }
 
-        return root;
+//        System.out.println(pathSum(root2, -1));
+        System.out.println(rightSideView(null));
 
+
+        // 使用
+//        System.out.println(serialize(root2));
+
+        return null;
 
     }
 
-    private static void postOrder(TreeNode root){
-        if(root == null){
+    private static void finMin(TreeNode root){
+          if(root == null){
+              return;
+          }
+          while(root.left != null){
+              root = root.left;
+          }
+          System.out.println("min="+ root.val);
+    }
+
+    // 前序遍历
+    public static void preOrder(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+          if(root == null){
             return;
         }
-        postOrder(root.left);
-        postOrder(root.right);
-        System.out.println("postOrder=="+root.val);
+//          list.add(root.val);
+        System.out.println("val="+ root.val);
+        preOrder(root.left);
+        preOrder(root.right);
+
     }
+    // 中序遍历
+    public static int inOrder(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int l = inOrder(root.left);
+        int r = inOrder(root.right);
+        return l + r + 1;
 
-
+    }
 
 
     public static List<Integer> rightSideView(TreeNode root) {
         List<Integer> res = new ArrayList<>();
-        if(root == null){
-            return res;
-        }
         Deque<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while(!queue.isEmpty()){
